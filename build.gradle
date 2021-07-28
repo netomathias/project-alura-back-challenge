@@ -1,0 +1,28 @@
+plugins {
+	id 'org.springframework.boot' version '2.5.3'
+	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+	id 'java'
+}
+
+group = 'br.com.alura-challenge'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	compileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.18'
+	annotationProcessor 'org.projectlombok:lombok:1.18.8'
+	implementation group: 'org.modelmapper', name: 'modelmapper', version: '2.4.2'
+	implementation 'org.springframework.boot:spring-boot-starter-validation'
+	implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.25'
+	implementation group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa', version: '2.4.5'
+}
+
+test {
+	useJUnitPlatform()
+}
